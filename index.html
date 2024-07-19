@@ -123,6 +123,15 @@
                 <div id="map" style="width:100%;height:400px;margin-top:20px;display:none;"></div>
             </div>
         </div>
+        <div class="card">
+            <div class="card-content">
+                <h2>Teacher Details</h2>
+                <button class="button" onclick="showTeacherDetails()">View Teacher Details</button>
+                <div id="teacher-details" style="display:none;">
+                    <iframe src="teacher-details.html" width="100%" height="400px" style="border:none;"></iframe>
+                </div>
+            </div>
+        </div>
     </div>
     <footer>
         <p>&copy; 2024 Zilla Parishad High School Mujgi. All rights reserved.</p>
@@ -130,6 +139,15 @@
     <script>
         function showMap() {
             window.open("https://www.google.com/maps/place/Zillaparishat+Unnatha+Patashala/@19.0628812,78.3012909,3a,75y,263.49h,90t/data=!3m7!1e1!3m5!1sq7VgX88hKA77FYxAiYbqrA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3Dq7VgX88hKA77FYxAiYbqrA%26cb_client%3Dmaps_sv.share%26w%3D900%26h%3D600%26yaw%3D263.49338%26pitch%3D0%26thumbfov%3D90!7i13312!8i6656!4m16!1m8!3m7!1s0x3bcd8ccc28c17681:0xc208836c4dcad0d2!2sNew+Mujgi,+Telangana!3b1!8m2!3d19.0660443!4d78.2960172!16s%2Fg%2F12hqvp68z!3m6!1s0x3bcd8d177b0539ef:0x2baa6b45b1d6d684!8m2!3d19.0628651!4d78.3011179!10e5!16s%2Fg%2F11lm5zv3tl?coh=205410&entry=ttu", "_blank");
+        }
+        
+        function showTeacherDetails() {
+            var detailsDiv = document.getElementById('teacher-details');
+            if (detailsDiv.style.display === 'none') {
+                detailsDiv.style.display = 'block';
+            } else {
+                detailsDiv.style.display = 'none';
+            }
         }
     </script>
 </body>
