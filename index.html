@@ -20,8 +20,6 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background-size: cover;
-            background-position: center center;
             position: relative;
         }
         header::before {
@@ -36,14 +34,14 @@
         }
         header h1 {
             position: relative;
-            font-size: 3.5em; /* Increased heading size */
+            font-size: 2.5em; /* Adjusted heading size for better readability */
             margin: 0;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            color: #FFD700; /* Changed heading color to gold for high visibility */
+            color: #FFD700; /* Gold color for high visibility */
             font-weight: bold;
         }
         .container {
-            padding: 20px;
+            padding: 10px;
         }
         .card {
             background: #fff;
@@ -52,16 +50,17 @@
             margin-bottom: 20px;
             overflow: hidden;
             display: flex;
+            flex-direction: column;
             align-items: center;
         }
         .card img {
-            width: 150px; /* Adjusted image width */
+            width: 100%; /* Responsive image width */
             height: auto;
-            margin-right: 20px;
+            max-width: 300px; /* Limit max-width for better fit on large screens */
         }
         .card-content {
-            padding: 20px;
-            flex-grow: 1;
+            padding: 10px;
+            text-align: center;
         }
         .card-content h2 {
             margin: 0;
@@ -74,22 +73,32 @@
             background: #333;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            padding: 10px;
+            position: relative;
         }
         .button {
             background-color: #4CAF50;
             border: none;
             color: white;
-            padding: 15px 32px;
+            padding: 10px 20px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 16px;
+            font-size: 14px;
             margin: 4px 2px;
             cursor: pointer;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .card {
+                flex-direction: column;
+            }
+            .card img {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -102,7 +111,7 @@
             <img src="https://media.istockphoto.com/id/1376131442/photo/teacher-with-students-around-explaining-or-teaching-from-book-on-classroom-concept-of-support.jpg?s=1024x1024&w=is&k=20&c=xYOUWk-VA9r4-ceAJkeDUXO14UqURwmRc5_2PCvaRJc=" alt="School Image">
             <div class="card-content">
                 <h2>About Us</h2>
-                <p>Zilla Parishad High School Mujgi is a Telugu medium school offering classes from 6 to 10. Located in the heart of New Mujgi, Nirmal Rural, our school provides quality education and holistic development to students.</p>
+                <p>Zilla Parishad High School Mujgi is a Telugu medium school offering classes from 6 to 10. Located in New Mujgi, Nirmal Rural, our school provides quality education and holistic development to students.</p>
             </div>
         </div>
         <div class="card">
